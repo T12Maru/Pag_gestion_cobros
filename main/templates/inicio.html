@@ -1,0 +1,17 @@
+{% extends 'plantilla.html' %}
+
+{% block content %}
+
+{% if user.EsDeudor %}
+<p>Estimado {{user.Nombre}}</p>
+<p>Usted no ha pagado su recibo correspondiente al domicilio:</p>
+<p>{{user.Domicilio}}</p>
+
+<p>Su deuda es de {{user.Deuda}} pesos </p>
+
+
+{% else %}
+<p>No debe dinero</p>
+{% endif %}
+
+{% endblock %}
